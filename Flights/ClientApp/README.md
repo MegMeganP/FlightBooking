@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+The above may not work if cli isn't working.
+
+More info
+WIP-work in progress
+
+C#/ASP.NET/Angular app
+.NET 6
+
+font awesome 4.7 cdn for index page head : use icons from: https://fontawesome.com/v4/icons/
