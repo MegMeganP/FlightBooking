@@ -56,7 +56,68 @@
 
 
 
-    <div *ngFor="let airline of searchResult">
-      {{airline}}
+    <div *ngFor="let flight of searchResult">
+      <div class="card text-dark mt-5 text-center">
+        <div class="card-body" style="padding: 20px; background-color:#e5ecf26e;">
+          <h6 class="card-title">{{flight.airline}}</h6>
+          <div class="card-title" style="color: red">
+            {{flight.remainingNumberOfSeats}} remaining seats
+          </div>
+
+          <div class="d-grid text-center g-2">
+            <div class="row">
+              <div class="col">
+                <div class="col m-3">
+                  <i class="text-primary fa fa-plane" style="font-size: 20px;"></i>
+                </div>
+                <div class="col">
+                  <i class="fa fa-map-marker"></i>
+                  {{flight.departure.place}}
+                </div>
+                <div class="col m-2">
+                  {{flight.departure.time | date}}
+                </div>
+                <div class="col m-2">
+                  <i class="fa-regular fa fa-clock-o"> </i>
+                  {{flight.departure.time | date:'shortTime'}}
+                </div>
+
+              </div>
+              <div class="col">
+                <div style="display: flex;">
+                  <i class="fa fa-circle" style="margin-top:50px; font-size:9px;"></i>
+                  <hr style="display:block; width: 100%; margin-top:55px;" />
+                  <i class="text-primary fa fa-fighter-jet " style="margin-top:48px;"></i>
+                </div>
+
+                <i class="fa fa-usd text-dark"></i>
+                {{flight.price}}
+                <br />
+                <a class="btn btn-secondary btn-lg mt-2" style="background-color: #1b6ec2;">
+                  <i class="fa fa-ticket"></i>
+                  Book
+                </a>
+              </div>
+
+              <div class="col">
+                <div class="col m-3">
+                  <i class="text-primary fa fa-location-arrow" style="font-size: 20px;"></i>
+                </div>
+                <div class="col">
+                  <i class="fa fa-map-marker"></i>
+                  {{flight.arrival.place}}
+                </div>
+                <div class="col m-2">
+                  {{flight.arrival.time | date}}
+                </div>
+                <div class="col m-2">
+                  <i class="fa-regular fa fa-clock-o"> </i>
+                  {{flight.arrival.time | date:'shortTime'}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 

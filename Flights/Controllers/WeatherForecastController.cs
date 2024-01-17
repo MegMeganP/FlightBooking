@@ -3,7 +3,7 @@
 namespace Flights.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]")]    // [Route("weatherforcast")]  https://localhost:PORT/weatherforcast
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -21,7 +21,7 @@ namespace Flights.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast  //Enumerable gets converted to json format, javascript object notation, transfer data over the web.  key value pairs
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
